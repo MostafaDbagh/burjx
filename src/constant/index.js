@@ -13,5 +13,7 @@ export const MarketHeaderTabs = [
     { title: '24h Change', icon: false },
   ];
 
-  export const Market = 'Markets'
+  export const AllCoinsUrl = 'coin-prices-all?currency=usd&page=1&pageSize=10'
+  export const MarketTitle = 'Markets'
   export const AllCoins = 'All Coins'
+  export const ErrorMessage = 'Error loading market data'
