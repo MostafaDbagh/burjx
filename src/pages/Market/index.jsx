@@ -8,6 +8,7 @@ import useFetchData from '../../hooks/useFetchData';
 import { headers } from '../../constant';
 import info from '../../assets/icons/icon-info.svg'
 import useWindowSize from '../../hooks/useWindowSize';
+import { Market,AllCoins } from '../../constant';
 import './style.css';
 import CardsCarousel from '../../components/ui/carousel/cardsCarousel';
 const Market = () => {
@@ -34,12 +35,12 @@ const Market = () => {
                 <img src={logo} alt="Logo" className="market-logo" />
             </div>
             <div style={{padding : isMobile ? '0 16px' :'0 48px'}}>
-                <p className="heading">Markets</p>
+                <p className="heading">{Market}</p>
                 <MarketTabs />
                 <div className="flex-cards">
                    <CardsCarousel  coins={apiData?.data}/>
                 </div>
-                <p className="heading">All Coins</p>
+                <p className="heading">{AllCoins}</p>
                 <div>
                   { !isMobile &&
                     <div className='flex-cards-tabs'>

@@ -12,3 +12,6 @@ export const MarketHeaderTabs = [
     { title: 'Price', icon: false },
     { title: '24h Change', icon: false },
   ];
+
+  export const Market = 'Markets'
+  export const AllCoins = 'All Coins'
