@@ -24,9 +24,9 @@ const Market = () => {
       b.priceChangePercentage24h - a.priceChangePercentage24h
     );
     return {
-      featuredCoins: coins.slice(0, 10), 
-      topGainers: sortedByChange.slice(0, 10), 
-      topLosers: sortedByChange.slice(-10).reverse(),
+      featuredCoins: coins.slice(0, 20), 
+      topGainers: sortedByChange.slice(0, 20), 
+      topLosers: sortedByChange.slice(-20).reverse(),
     };
   }, [apiData]);
 
