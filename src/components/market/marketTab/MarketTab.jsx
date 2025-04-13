@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './style.css';
 import { MarketHeaderTabs } from '../../../constant';
 import { MarketTitle } from '../../../constant';
-function MarketTabs() {
-  const [activeTab, setActiveTab] = useState(MarketHeaderTabs[0].id);
+function MarketTabs({activeTab,setActiveTab}) {
 
   return (
     <>
@@ -12,8 +11,8 @@ function MarketTabs() {
       {MarketHeaderTabs.map(item => (
         <div
           key={item.id}
-          className={`tab  ${activeTab === item.id ? `active tab-${item.id}` : ''}`}
-          onClick={() => setActiveTab(item.id)}
+          className={`tab  ${activeTab === item.txt ? `active tab-${item.id}` : ''}`}
+          onClick={() => setActiveTab(item.txt)}
         >
           {item.txt}
         </div>
