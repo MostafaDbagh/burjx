@@ -1,14 +1,13 @@
-
-import Market from "./pages/Market"
-import './font.css'
-import './App.css'
+import './App.css';
+import { PageRoutes } from './routes';
 function App() {
 
+
   return (
-    <>
- <Market/>
-    </>
-  )
+    <div className="App">
+   <PageRoutes/>
+    </div>
+  );
 }
 
-export default App
+export default App;

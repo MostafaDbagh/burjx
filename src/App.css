@@ -2,86 +2,13 @@
 
 /* common classes used in the app  */
 
-.heading{
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 60px;
-  color: var(--white-color);
-  font-family: 'lugfa-bold','poppins';
-  @media (max-width:768px) {
-    font-size: 24px;
-  }
-}
-.coin-image {
-  width: 40px;
-  height: 40px;
-  margin-right: 12px;
-  border-radius: 50%;
-  object-fit: cover;
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
 }
 
-.coin-info{
-  display: flex;
-  flex-direction: column;
-}
-.coin-info-symbol {
-  font-weight: bold;
-  font-size: 1rem;
-  font-family: 'lufga-regular',sans-serif;
-  color: #fff;
-}
-.coin-info-name {
-  font-size: 0.75rem;
-  font-family: 'lufga-light',sans-serif;
-  color: rgba(255, 255, 255, .5);
-}
 
-.price {
-  font-size: 1rem;
-  margin-bottom: 0.25rem;
-  color: #fff;
-  font-family: 'lugfa','poppins';
-  font-family: 'lufga-regular';
-}
-.pirce-info-daily-change {
-  width: 54px;
-  height: 24px;
-  border-radius: 8px;
-  padding: 4px;
-  background-color: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(5px);
-  display: inline-flex; 
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-size: 12px;
-  font-family: 'lufga-regular';
-
-}
-
-.up {
-  color: var(--primary-color);
-
-}
-
-.down {
-  color: var(--down-color);
-}
-.all-coin-header{
-  font-size: 12px;
-  font-family: 'lufga-light',sans-serif;
-  color:rgba(255, 255, 255, .5);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap:4px
-}
-.error {
-  color: var(--error-color);
-  text-align: center;
-  padding: 2rem;
-  font-size: 1.2rem;
-}
 .flex-between-center{
   display: flex;
   justify-content: space-between;

@@ -1,0 +1,54 @@
+
+
+.subscribeInput{
+    width: 330px;
+    height: 60px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+
+    border: none;
+    outline: 0;
+    padding: 24px  ;
+    @media(max-width:786px) {
+        width: 205px;
+    }
+}
+
+.subscribeInput::placeholder{
+    font-family: oswald;
+    font-size: 16px;
+}
+.subscribeButton{
+    width: 150px;
+    height: 60px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    font-family: lato;
+background: #ffd1da;
+font-weight: bold;
+    border: none;
+    outline: 0;
+    padding: 12px 24px ;
+    font-size: 18px;
+    margin: 0 !important;
+    @media(max-width:786px) {
+        width: 100px;
+        padding: 12px 6px;
+    }
+}
+.subscribeSectionTitle{
+    font-size:36px;
+    margin:32px auto;
+    @media(max-width:786px) {
+        font-size: 24px;
+        margin: 16px auto;
+    }
+}
+.subscribtionSectionSubTitle{
+    font-size: 18px;
+    @media(max-width:786px) {
+        font-size: 14px;
+    }
+}

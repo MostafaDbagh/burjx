@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { get } from '../axios/axiosConfig';  
+import { get } from '../axios';  
 
 const useFetchData = (url) => {
   const [apiData, setApiData] = useState([]);
