@@ -1,17 +1,11 @@
 import React from "react";
-import logo from '../../assests/images/logo.png'
-
+import AuthHeader from "./authModalHeader";
 
 const RegisterForm = ({ setStep, setEmail }) => {
   return (
     <>
-      <div className="d-flex flex-column gap-3 justify-content-center align-items-center">
-        <img src={logo} alt="toma-boutique" width="260" height="100" />
-        <h5 className="modal-title text-center mb-5" style={{ fontFamily: "lufga-medium" }}>
-          Create a new Toma Account
-        </h5>
-      </div>
-
+   
+<AuthHeader title="Create a new Toma Account" />
       <div className="mb-2 w-100 d-flex flex-column">
         <label htmlFor="registerEmail" className="form-label w-100 auth-label">Email</label>
         <input

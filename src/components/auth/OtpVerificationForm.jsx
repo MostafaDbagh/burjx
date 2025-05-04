@@ -1,22 +1,17 @@
 import React from "react";
-import logo from '../../assests/images/logo.png'
-
+import AuthHeader from "./authModalHeader";
 
 const OtpVerificationForm = ({ email }) => {
   return (
     <>
-      <div className="d-flex flex-column gap-3 justify-content-center align-items-center">
-        <img src={logo} alt="toma-boutique" width="260" height="100" />
-        <h5 className="modal-title text-center mb-3" style={{ fontFamily: "lufga-medium" }}>
-          Verify Your Email
-        </h5>
-      </div>
+    
+<AuthHeader title="Verify Your Email" />
 
       <p className="text-center mb-2">
         Enter the 6-digit code sent to <strong>{email}</strong>
       </p>
 
-      <div className="d-flex justify-content-center gap-2 mb-3">
+      <div className="d-flex justify-content-center gap-2 mb-2">
         {[1, 2, 3, 4, 5, 6].map((num, i) => (
           <input
             key={num}

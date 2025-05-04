@@ -34,7 +34,6 @@ const SingleProduct = ({  productPrice, productName,productImage,productId,hasDi
     }
     return (
         <>
-        {console.log(wishlist,'wishlist')}
         <div className="card cardMargin border-0  rounded-0 bg-.bg-secondary shadow">
             <div className="d-flex align-items-center">
             { hasDiscount && <div className="soldout-tag" style={{

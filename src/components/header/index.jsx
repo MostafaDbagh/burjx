@@ -6,7 +6,7 @@ import Logo from "../../assests/images/logo.png";
 import "./index.css";
 import { ChangeLanguage } from "../ui/languageDropdown";
 
-const Header = ({ setShowPorductsModal,showModalProduct }) => {
+const Header = ({ setShowPorductsModal,showModalProduct,authModal,setAuthModal,setActiveModal }) => {
   const product = useSelector((state) => state.product);
   const wishlist = useSelector((state) =>state.wishList)
   const totalQuantity = product.reduce((acc, curr) => acc + curr.quantity, 0);
@@ -14,13 +14,10 @@ const Header = ({ setShowPorductsModal,showModalProduct }) => {
   return (
     <Navbar collapseOnSelect expand="lg" className="custom-navbar">
       <Container>
-{console.log(totalLikes,'fuck')}
         <Navbar.Brand href="/">
           <img src={Logo} alt="toma-boutique" className="brand-logo" />
         </Navbar.Brand>
-
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-
         <Navbar.Collapse id="responsive-navbar-nav d-flex justify-content-center align-items-cetner">
  <div className="d-flex justify-content-center align-items-center">
 
@@ -42,18 +39,20 @@ const Header = ({ setShowPorductsModal,showModalProduct }) => {
           </div>
 
           <Nav className="align-items-center inline-box  ">
-            {NavIcons.map(({  src, alt, onClick, showBadge }, index) => (
+            {NavIcons.map(({  src, alt, onClick, showBadge,modalType }, index) => (
               <Nav.Link
                 key={`icon-${index}`}
-                onClick={() =>setShowPorductsModal(true) }
+                onClick={() =>setActiveModal(modalType) }
                 className="px-2 position-relative"
               >
+            
                 <img src={src} alt={alt} width={30} height={30} />
-                {showBadge && totalQuantity > 0 && (
+
+                {alt == 'basket' && showBadge && totalQuantity > 0 && (
                   <span className="nav-badge">{totalQuantity}</span>
                 )}
-                     {showBadge && totalQuantity > 0 && (
-                  <span className="nav-badge" style={{left:'74px',top:'-2px'}}>{totalLikes}</span>
+                     {alt == 'wishlist' && showBadge && totalQuantity > 0 && (
+                  <span className="nav-badge" style={{left:'28px',top:'-2px'}}>{totalLikes}</span>
                 )}
               </Nav.Link>
             ))}

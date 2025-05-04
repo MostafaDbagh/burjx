@@ -20,33 +20,37 @@ export const mainNavLinks = [
 
   export const NavIcons = [
     {
-        label: 'Basket',
-        type: 'icon',
-        icon: basket,
-        alt: 'basket',
-        src:basket,
-        onClick: true,
-        showBadge: true,
-      },
-      {
-        label: 'Wishlist',
-        type: 'icon',
-        icon: wishlist,
-        alt: 'wishlist',
-        src:wishlist,
-        onClick: true,
-        showBadge: false,
-      },
-      {
-          label: 'login',
-          type: 'icon',
-          icon: login,
-          alt: 'login',
-          src:login,
-          onClick: true,
-          showBadge: false,
-        },
-  ]
+      label: 'Basket',
+      type: 'icon',
+      icon: basket,
+      alt: 'basket',
+      src: basket,
+      onClick: true,
+      showBadge: true,
+      modalType: 'cart',
+    },
+    {
+      label: 'Wishlist',
+      type: 'icon',
+      icon: wishlist,
+      alt: 'wishlist',
+      src: wishlist,
+      onClick: true,
+      showBadge: true,
+      modalType: 'wishlist',
+    },
+    {
+      label: 'Login',
+      type: 'icon',
+      icon: login,
+      alt: 'login',
+      src: login,
+      onClick: true,
+      showBadge: false,
+      modalType: 'auth',
+    },
+  ];
+  
 
   export const popularTags = [
     "Men",
