@@ -1,0 +1,55 @@
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1050;
+  }
+  
+  .link-text {
+    color: #28a745;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .link-text:hover {
+    text-decoration: underline;
+  }
+  .auth-input{
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 4px;
+    background: white ;
+    min-height: 46px;
+    padding: 0 0 0 12px;
+    border: 1px solid var(--card-color);
+    color: var(--card-color);
+    outline: 0;
+    font-family: lufga-regular,sans-serif;
+  }
+  .auth-label{
+    font-size: 14px;
+    font-family: lufga-medium,sans-serif;
+    margin-left: 24px;
+  }
+  .auth-btn{
+    width: 405px;
+    margin: 0 auto;
+    background-color: #E80f88 !important;
+    color: white !important;
+    font-family: lufga-regular,sans-serif;
+  }
+  .custom-close-btn:focus{
+    outline: none !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+  .auth-danger{
+    font-size: 12px;
+    font-family: lufga-light,sans-serif;
+    color: var(--danger-color);
+    margin-left: 24px;
+
+  }

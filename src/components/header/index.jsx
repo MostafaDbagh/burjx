@@ -8,11 +8,13 @@ import { ChangeLanguage } from "../ui/languageDropdown";
 
 const Header = ({ setShowPorductsModal,showModalProduct }) => {
   const product = useSelector((state) => state.product);
+  const wishlist = useSelector((state) =>state.wishList)
   const totalQuantity = product.reduce((acc, curr) => acc + curr.quantity, 0);
+  const totalLikes = wishlist.length;
   return (
     <Navbar collapseOnSelect expand="lg" className="custom-navbar">
       <Container>
-
+{console.log(totalLikes,'fuck')}
         <Navbar.Brand href="/">
           <img src={Logo} alt="toma-boutique" className="brand-logo" />
         </Navbar.Brand>
@@ -49,6 +51,9 @@ const Header = ({ setShowPorductsModal,showModalProduct }) => {
                 <img src={src} alt={alt} width={30} height={30} />
                 {showBadge && totalQuantity > 0 && (
                   <span className="nav-badge">{totalQuantity}</span>
+                )}
+                     {showBadge && totalQuantity > 0 && (
+                  <span className="nav-badge" style={{left:'74px',top:'-2px'}}>{totalLikes}</span>
                 )}
               </Nav.Link>
             ))}

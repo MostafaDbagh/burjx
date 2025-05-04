@@ -28,6 +28,7 @@
     }
   }
   .soldout-tag {
+    font-family: lufga-medium,sans-serif;
     color: white;
     font-size: 14px;
     font-weight: bold;
@@ -42,6 +43,7 @@
     position: relative;
     z-index: 999;
     left: -45px;
+    letter-spacing: 1px;
   }
 
   .flexBetween{

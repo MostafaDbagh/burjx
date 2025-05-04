@@ -1,10 +1,10 @@
 
 
 :root {
-  --primary-color: #CDFF00;
+  --primary-color: #E80f88;
   --down-color :#ff3440;
   --up-color:#0f0;
-  --error-color:#f00;
+  --danger-color:#f73131;
   --white-color:#fff;
   --card-color:#2b2b2b;
   --gray-color:#808089;
@@ -17,4 +17,8 @@
 
 .padding-top-down{
   padding: 120px 0 64px;
+}
+
+.toma-primary{
+  color: var(--primary-color);
 }

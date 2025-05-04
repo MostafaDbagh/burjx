@@ -47,3 +47,13 @@ export const mainNavLinks = [
           showBadge: false,
         },
   ]
+
+  export const popularTags = [
+    "Men",
+    "Women",
+    "Clothes",
+    "Accessories",
+    "Shoes",
+    "Bags",
+    "Jewelry",
+  ];
