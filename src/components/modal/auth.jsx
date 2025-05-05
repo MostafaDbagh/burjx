@@ -16,10 +16,11 @@ const authSteps = {
   otp: OtpVerificationForm,
   verifyReset: VerifyAndResetPasswordForm,
 };
-
+//steps ---- > 1- register 2-send-0tp  3-verify-otp    flow number 1
+//login ----> 
 const AuthModal = ({ setActiveModal }) => {
-  const [step, setStep] = useState("register");
-
+  const [step, setStep] = useState("login");
+  
   const renderContent = () => {
     const StepComponent = authSteps[step];
     return StepComponent ? <StepComponent setStep={setStep} /> : null;

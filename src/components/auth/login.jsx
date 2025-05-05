@@ -39,7 +39,7 @@ const LoginForm = ({ setStep }) => {
       </div>
 
       <div className="mb-3 text-start px-4">
-        <span className="toma-primary cursor-pointer">Forgot password?</span>
+        <span className="toma-primary cursor-pointer" onClick={()=>setStep('forgot')}>Forgot password?</span>
       </div>
 
       <button className="btn auth-btn mb-5">Login</button>

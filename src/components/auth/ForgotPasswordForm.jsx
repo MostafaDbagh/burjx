@@ -1,6 +1,6 @@
 import React from "react";
 import AuthHeader from "./authModalHeader";
-const ForgotPasswordForm = () => {
+const ForgotPasswordForm = ({setStep}) => {
   return (
     <>
       <AuthHeader
@@ -28,7 +28,7 @@ const ForgotPasswordForm = () => {
         No account associated with this email address
       </div>
 
-      <button className="btn auth-btn w-100 mb-2">Next</button>
+      <button className="btn auth-btn w-100 mb-2" onClick={()=>setStep('verifyReset')}>Next</button>
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import AuthHeader from "./authModalHeader";
 
-const OtpVerificationForm = ({ email }) => {
+const OtpVerificationForm = ({ email,setStep }) => {
   return (
     <>
     
@@ -34,7 +34,7 @@ const OtpVerificationForm = ({ email }) => {
         <span className="text-danger small">Invalid OTP code</span>
       </div>
 
-      <button className="btn auth-btn w-100 mb-2">Verify</button>
+      <button className="btn auth-btn w-100 mb-2" onClick={() => setStep('login')}>Verify</button>
 
       <p className="text-center small">
         Didn’t get it? <span className="toma-primary cursor-pointer">Resend</span>

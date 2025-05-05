@@ -15,7 +15,7 @@ const RegisterForm = ({ setStep, setEmail }) => {
           placeholder="Enter email..."
           onChange={(e) => setEmail(e.target.value)}
         />
-        {true && <span className="text-danger text-left d-block auth-danger">Please enter a valid email</span>}
+        {false && <span className="text-danger text-left d-block auth-danger">Please enter a valid email</span>}
       </div>
 
       <div className="mb-2 w-100 d-flex flex-column">
