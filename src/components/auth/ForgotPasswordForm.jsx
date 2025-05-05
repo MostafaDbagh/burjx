@@ -27,9 +27,9 @@ const ForgotPasswordForm = ({setStep}) => {
       >
         No account associated with this email address
       </div>
-      
 
-      <button className="btn auth-btn w-100 mb-2" onClick={()=>setStep('verifyReset')}>Next</button>
+
+      <button className="btn auth-btn w-100 mb-2" onClick={()=>setStep('verifyForgetPassword')}>Next</button>
     </>
   );
 };

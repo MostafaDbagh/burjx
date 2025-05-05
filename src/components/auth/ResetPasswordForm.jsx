@@ -1,6 +1,6 @@
 import React from "react";
 import AuthHeader from "./authModalHeader";
-const ResetPasswordForm = () => {
+const ResetPasswordForm = ({setStep}) => {
   return (
     <>
       <AuthHeader
@@ -53,7 +53,7 @@ const ResetPasswordForm = () => {
         This requires all devices to log in with the new password
       </div>
 
-      <button className="btn btn-secondary w-100" disabled>
+      <button className="btn btn-secondary w-100"  onClick={()=>setStep('login')} disabled>
         Submit
       </button>
     </>

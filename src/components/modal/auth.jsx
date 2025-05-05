@@ -6,7 +6,7 @@ import RegisterForm from "../auth/register";
 import ForgotPasswordForm from "../auth/ForgotPasswordForm";
 import ResetPasswordForm from "../auth/ResetPasswordForm";
 import OtpVerificationForm from "../auth/OtpVerificationForm";
-import VerifyAndResetPasswordForm from "../auth/verifyResetPasswordForm";
+import VerifyAndResetForgetPasswordForm from "../auth/verifyResetPasswordForm";
 
 const authSteps = {
   login: LoginForm,
@@ -14,7 +14,7 @@ const authSteps = {
   forgot: ForgotPasswordForm,
   reset: ResetPasswordForm,
   otp: OtpVerificationForm,
-  verifyReset: VerifyAndResetPasswordForm,
+  verifyForgetPassword: VerifyAndResetForgetPasswordForm,
 };
 //steps ---- > 1- register 2-send-0tp  3-verify-otp    flow number 1
 //login ----> 
