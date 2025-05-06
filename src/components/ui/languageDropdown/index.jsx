@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './style.css';
 
-import EnglishFlag from '../../../assests/images/us.svg';
-import ArabicFlag from  '../../../assests/images/sa.svg';
+import EnglishFlag from '../../../assests/images/usa-flag.svg';
+import ArabicFlag from  '../../../assests/images/uae-flag.svg';
 
 export function ChangeLanguage() {
   const { i18n } = useTranslation();
@@ -21,6 +21,11 @@ export function ChangeLanguage() {
   };
 
   return (
+    <div className='d-flex justify-content-center align-items-center mx-4 '>
+      <span style={{fontFamily:'lufga-bold',fontSize:'16px'}}>
+      En
+      </span>
+   
     <button 
       className="language-switcher"
       onClick={toggleLanguage}
@@ -42,9 +47,12 @@ export function ChangeLanguage() {
           height={18}
         />
       </div>
-      <span className="language-text">
-        {isEnglish ? 'EN' : 'AR'}
-      </span>
+   
     </button>
+    <span style={{fontFamily:'lufga-bold',fontSize:'16px',}}>
+      Ar
+      </span>
+    </div>
+
   );
 }
