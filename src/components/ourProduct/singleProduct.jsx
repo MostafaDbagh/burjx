@@ -2,11 +2,13 @@
 import { useNavigate } from "react-router-dom";
 import heart from '../../assests/images/heart.svg'
 import { useDispatch,useSelector } from "react-redux";
-import { addToWishlist } from "../../redux/reducer/wishListReducer";
+import {  toggleWishlistItem } from "../../redux/reducer/wishListReducer";
+import HeartIcon from "../../assests/images/heart";
 import './index.css'
+import { useState } from "react";
 const SingleProduct = ({  productPrice, productName,productImage,productId,hasDiscount,discountValue,discountReason }) => {
 
-
+    const [liked,setLiked] = useState(false)
     const dispatch = useDispatch()
     const wishlist  = useSelector(state =>state.wishList)
 
@@ -42,8 +44,9 @@ const SingleProduct = ({  productPrice, productName,productImage,productId,hasDi
             </div>
             }
             <button
-            onClick={()=>dispatch(addToWishlist({productId,productName,productPrice,productImage}))}
-             style={{margin:'0 8px 0 auto',borderRadius:'50%',background:`#fff`}}><img src={heart} alt='toma-ecomerce' width={30} height={30} /> 
+            onClick={()=>dispatch(toggleWishlistItem({productId,productName,productPrice,productImage}))}
+             style={{margin:'0 8px 0 auto',borderRadius:'50%',background:`#fff`}}>
+               <HeartIcon fill={liked} onClick={() => setLiked(!liked)}  />
              </button>
             </div>
       

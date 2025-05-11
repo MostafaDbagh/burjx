@@ -103,7 +103,7 @@ input[type=number] {
 .flexFontHeader{
   font-size: 72px;
   font-family: lufga-bold,sans-serif;
-  margin-top: 72px;
+  margin-top:48px;
   @media (max-width:786px) {
     font-size: 38px;
   }

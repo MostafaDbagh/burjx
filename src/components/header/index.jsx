@@ -1,69 +1,80 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { Container, Nav, Navbar } from "react-bootstrap";
-import { mainNavLinks, extraNavLinks, NavIcons } from "../constant";
-import Logo from "../../assests/images/logo.png";
+import { mainNavLinks, NavIcons } from "../constant";
+import burger from "../../assests/images/burger.svg";
 import "./index.css";
-import { ChangeLanguage } from "../ui/languageDropdown";
+import useIsMobile from "../../hooks/useWindowSize";
 
-const Header = ({ setShowPorductsModal,showModalProduct,authModal,setAuthModal,setActiveModal }) => {
+const NewHeader = ({ setActiveModal }) => {
+  const isMobile = useIsMobile();
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const product = useSelector((state) => state.product);
-  const wishlist = useSelector((state) =>state.wishList)
+  const wishlist = useSelector((state) => state.wishList);
   const totalQuantity = product.reduce((acc, curr) => acc + curr.quantity, 0);
   const totalLikes = wishlist.length;
+
+  useEffect(() => {
+    // Reset menu when screen size changes
+    setMenuOpen(!isMobile);
+  }, [isMobile]);
+
+  const renderBadge = (alt) => {
+    if (alt === "basket" && totalQuantity > 0) {
+      return <span className="nav-badge" style={{ top: "-10px", right: "-10px" }}>{totalQuantity}</span>;
+    }
+    if (alt === "wishlist" && totalLikes > 0) {
+      return <span className="nav-badge" style={{ top: "-10px", right: "-5px" }}>{totalLikes}</span>;
+    }
+    return null;
+  };
+
   return (
-    <Navbar collapseOnSelect expand="lg" className="custom-navbar">
-      <Container>
-        <Navbar.Brand href="/">
-          <img src={Logo} alt="toma-boutique" className="brand-logo" />
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav d-flex justify-content-center align-items-cetner">
- <div className="d-flex justify-content-center align-items-center">
-
-          <Nav className="me-auto nav-links">
-            {mainNavLinks.map(({ label, path }, index) => (
-              <Nav.Link key={`main-${index}`} href={path} className="px-3">
-                {label}
-              </Nav.Link>
-            ))}
-          </Nav>
-
-          <Nav className="inline-box px-lg-3 my-md-3">
-            {extraNavLinks.map(({ label, path }, index) => (
-              <Nav.Link key={`extra-${index}`} href={path || "#"} className="px-2">
-                {label}
-              </Nav.Link>
-            ))}
-          </Nav>
+    <div className="header-container">
+      <div className="top-header">
+        <div className="d-flex justify-content-between align-items-center ">
+          <div className="d-flex flex-column justify-content-center align-items-center">
+            <p className="m-0 p-0" style={{ fontSize: "24px", fontFamily: "lufga-bold" }}>
+              TOMA-BOUTIQUE.
+            </p>
+            <p className="m-0" style={{ fontFamily: "lufga-light" }}>
+              online store
+            </p>
           </div>
+          {isMobile && (
+            <button
+              className="burger-toggle m-0"
+              onClick={() => setMenuOpen(prev => !prev)}
+              style={{ background: "none", border: "none" }}
+            >
+              <img src={burger} alt="burger" width={32} height={32} />
+            </button>
+          )}
+        </div>
 
-          <Nav className="align-items-center inline-box  ">
-            {NavIcons.map(({  src, alt, onClick, showBadge,modalType }, index) => (
-              <Nav.Link
-                key={`icon-${index}`}
-                onClick={() =>setActiveModal(modalType) }
-                className="px-2 position-relative"
-              >
-            
-                <img src={src} alt={alt} width={30} height={30} />
-
-                {alt == 'basket' && showBadge && totalQuantity > 0 && (
-                  <span className="nav-badge">{totalQuantity}</span>
-                )}
-                     {alt == 'wishlist' && showBadge && totalQuantity > 0 && (
-                  <span className="nav-badge" style={{left:'28px',top:'-2px'}}>{totalLikes}</span>
-                )}
-              </Nav.Link>
+        <div className={`menu-section ${menuOpen ? "show" : "hide"} my-auto`}>
+          <ul className="main-links d-flex gap-4 p-0 m-0 flex-wrap ">
+            {mainNavLinks.map(({ label, path }, idx) => (
+              <li key={idx} className="m-0 px-lg-3">
+                <a href={path}>{label}</a>
+              </li>
             ))}
-          </Nav>
-          <ChangeLanguage/>
+          </ul>
+        </div>
 
-
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+        <div className={`navicons mt-3 ${menuOpen ? "show" : "hide"}`}>
+          <ul className="p-0 d-flex gap-3 m-0 justify-content-center">
+            {NavIcons.map(({ src, alt, modalType, showBadge }, idx) => (
+              <li key={idx} onClick={() => setActiveModal(modalType)} style={{ position: "relative" }}>
+                <img src={src} alt={alt} width={30} height={30} />
+                {showBadge && renderBadge(alt)}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default Header;
+export default NewHeader;

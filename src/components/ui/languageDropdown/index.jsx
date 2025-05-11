@@ -21,7 +21,7 @@ export function ChangeLanguage() {
   };
 
   return (
-    <div className='d-flex justify-content-center align-items-center mx-4 '>
+    <div className='d-flex justify-content-center align-items-center ml-auto my-auto'>
       <span style={{fontFamily:'lufga-bold',fontSize:'16px'}}>
       En
       </span>
@@ -50,7 +50,7 @@ export function ChangeLanguage() {
    
     </button>
     <span style={{fontFamily:'lufga-bold',fontSize:'16px',}}>
-      Ar
+      العربية
       </span>
     </div>
 

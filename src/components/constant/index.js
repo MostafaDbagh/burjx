@@ -4,10 +4,8 @@ import login from '../../assests/images/person.svg'
 
 export const mainNavLinks = [
     { label: 'Home', path: '/', font: 'Lufga-bold' },
-    { label: 'Makeup', path: '#makeup' },
     { label: 'Accessories', path: '#accessories' },
-    { label: 'Perfumes', path: '#perfumes' },
-    { label: 'Hair-Care', path: '#hair-care' },
+    { label: 'Clothers', path: '#perfumes' },
     { label: 'Cosmetics', path: '#cosmetics' },
     { label: 'Sunstiblity', path: '#sunstiblity' },
   ];

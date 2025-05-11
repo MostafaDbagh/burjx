@@ -17,7 +17,7 @@
     border-radius: 24px;
     @media (max-width:786px) {
         max-width: 100%;
-        
+        padding: 16px;
         margin-top: 16px 0 16px;
 
    }
@@ -36,11 +36,12 @@
     border: 0;
     outline: 0;
     @media (max-width:786px) {
-        width: 290px !important;
+        width: 350px !important;
 
      }
 }
 .searchButton{
+  max-width: 78px;
     background:#fba1b7 !important ;
     position: absolute ;
     color: var(--white-color) !important;
