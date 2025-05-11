@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import NewHeader from "../header/newHeader";
+import NewHeader from "../header";
 import Footer from "../footer";
 import CartModal from "../modal/pickedProducts";
+import WishlistModal from "../modal/wishlistProduct";
 import { Search } from "../search";
 import { ToastContainer } from "react-bootstrap";
 import AuthModal from "../modal/auth";
@@ -19,7 +20,7 @@ const Layout = ({ children, activeModal, setActiveModal }) => {
       )}
 
 {activeModal === "wishlist" && (
-        <CartModal
+        <WishlistModal
         setActiveModal={setActiveModal}
         />
       )}

@@ -70,7 +70,6 @@
 .main-links li:hover {
   background-color: #fba1b7;
   opacity: .7;
-  border-radius: 24px;
 }
 
 .main-links li:hover a {

@@ -61,7 +61,6 @@ const NewHeader = ({ setActiveModal }) => {
             ))}
           </ul>
         </div>
-
         <div className={`navicons mt-3 ${menuOpen ? "show" : "hide"}`}>
           <ul className="p-0 d-flex gap-3 m-0 justify-content-center">
             {NavIcons.map(({ src, alt, modalType, showBadge }, idx) => (
