@@ -16,9 +16,9 @@ const Footer = () => {
 <div className='keyInfoSection'>
         <div className="socialMedia   px-5 pt-5" style={{background:'#f8f9fa',borderRadius:'4px',height:'100%'}}>
           <img src={logo} alt="highquickAction" width='260' height='100' />
-             <div className="socialMediaLinks px-3 pt-4 text-center" style={{color:"black",fontFamily:'oswald',fontSize:'18px'}}> 
+             <div className="socialMediaLinks px-3 pt-4 text-center" style={{color:"black",fontFamily:'lufga-medium',fontSize:'18px'}}> 
              <p>Follow <span style={{color:'#E80f88'}}>Us:</span> </p>
-             <div className='d-flex'>
+             <div className='d-flex justify-content-center '>
                 <ul className="d-flex p-0 justify-content-center m-0 icons">
                     <li className='icons' style={{'listStyle':'none'}}><img src={instagram}  alt="social-medai"/></li>
                     <li className='icons'><img src={whatsapp} width='40' height='40'  alt="social-medai"/></li>
@@ -26,11 +26,11 @@ const Footer = () => {
                     <li className='icons'><img src={envelop} width='40' height='40'  alt="social-medai"/></li>
                 </ul>
              </div>
-             <p className="my-5 text-center" style={{fontFamily:'oswald',fontSize:'22px',color:'#E80f88',margin:'0'}}>Shopping Different with us</p>
+             <p className="my-5 text-center" style={{fontFamily:'lufga-regular',fontSize:'22px',color:'#E80f88',margin:'0'}}>Shopping Different with us</p>
              </div>\
              </div>
              <div className='p-5 my-auto' >
-              <p   style={{fontFamily:'oswald',fontSize:'22px',padding:'0',marginBottom:'8px',borderBottom:'3px solid white',color:'#215259'}}>key Info</p>
+              <p   style={{fontFamily:'lufga-regular',fontSize:'22px',padding:'0',marginBottom:'8px',borderBottom:'3px solid white',color:'#215259'}}>key Info</p>
               <ul className='m-0 p-0'>
                 <li className='py-1'><a className='keyInfo'href='/termsandcondition'>Terms & Condition</a></li>
                 <li className='py-1'><a className='keyInfo'href='/termsandcondition'>Privacy & Policy</a></li>
