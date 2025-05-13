@@ -7,6 +7,7 @@ import { useDispatch } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import "./index.css";
+import { removeFromWishlist } from "../../redux/reducer/wishListReducer";
 const WishlistModal = ({ setActiveModal }) => {
   const wishList = useSelector((state) => state.wishList);
   const dispatch = useDispatch();
@@ -20,7 +21,6 @@ const WishlistModal = ({ setActiveModal }) => {
       autoClose: 3000,
     });
   };
-  console.log(wishlistNumber, "fukc");
   return (
     <>
       <ToastContainer />
@@ -49,7 +49,7 @@ const WishlistModal = ({ setActiveModal }) => {
                   </div>
                   <div
                     className="liked-action"
-                    onClick={() => reduceProductNumber(product)}
+                    onClick={()=>dispatch(removeFromWishlist({productId:product.productId}))}
                   >
                     <img src={Delete} alt="delete" width={24} height={24} />
                   </div>
