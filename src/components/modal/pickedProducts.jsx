@@ -26,7 +26,7 @@ const CartModal = ({ setActiveModal }) => {
       <ToastContainer />
       <Modal show onHide={() => setActiveModal(null)}>
         <Modal.Header closeButton>
-          <Modal.Title style={{ fontFamily: "oswald" }}>Picked Products</Modal.Title>
+          <Modal.Title style={{ fontFamily: "lufga-regular" }}>Picked Products</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           {productNumber() > 0 ? (
@@ -56,12 +56,12 @@ const CartModal = ({ setActiveModal }) => {
               ) : null
             )
           ) : (
-            <p className="text-center" style={{ fontFamily: "lato", fontSize: "22px" }}>
+            <p className="text-center" style={{ fontFamily: "lufga-light", fontSize: "22px" }}>
               No item to show
             </p>
           )}
         </Modal.Body>
-        <Modal.Footer style={{ fontFamily: "lato" }}>
+        <Modal.Footer style={{ fontFamily: "lufga-regular" }}>
           <Button variant="secondary" onClick={() => setActiveModal(null)}>
             Close
           </Button>

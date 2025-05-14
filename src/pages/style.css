@@ -93,9 +93,14 @@ input[type=number] {
   width: 100%;
   margin:0 auto;
    background: url(../assests/images/bg.jpg); 
-   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   position: relative;
+  @media (max-width:786px) {
+    background-size: cover;
+
+  }
 }
 .sperator{
   color: #fba1b7;
@@ -108,10 +113,11 @@ input[type=number] {
   color: var(--card-color);
   @media (max-width:786px) {
     font-size: 38px;
+    padding: 0 32px;
   }
 }
 .flexFontDesc{
-    padding: 0 32px;
+    padding: 0 48px;
     font-size: 20px;
   @media (max-width:786px) {
         padding: 0 16px;
@@ -122,13 +128,14 @@ input[type=number] {
 .flexFontDesc > p{
   width: 60%;
   font-family: lufga-regular,sans-serif;
+  @media (max-width:786px) {
+    padding: 0 16px;
+    width: 100%;
+
+}
 }
 .flexPadding{
   padding: 0 32px;
-  @media (max-width:786px) {
-    padding: 0 16px;
-
-}
 
 }
 input[type="radio"] {
@@ -143,7 +150,10 @@ input[type="radio"] {
 }
 .primary-cta{
   background: #E80f88;
-  margin-left: 16px;
   font-family: lufga-light ,sans-serif;
   min-width: 135px;
+    @media (max-width:786px) {
+    margin: 0 16px;
+
+}
 }

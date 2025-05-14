@@ -20,12 +20,12 @@ const Subscribe = () => {
 
         
         }}>
-            <p className='subscribeSectionTitle' style={{fontFamily:'oswald',padding:'12px'}}>SUBSCRIBE TO NEWSLETTER</p>
-            <div className='d-flex justify-content-cetner align-items-center px-3 py-1'>
-                <input className='subscribeInput' onChange={(e)=>setSubscribeEmail(e.target.value)} type="text" placeholder="Type your Email Address" id="emailAddressSubscribe" />
-                <button className='subscribeButton' onClick={()=>console.log('hi')}>Subscribe</button>
+            <p className='subscribeSectionTitle' style={{fontFamily:'lufga-regular',padding:'12px'}}>SUBSCRIBE TO NEWSLETTER</p>
+            <div className='d-flex justify-content-cetner align-items-center px-3 py-1' style={{fontFamily:'lufga-light'}}>
+                <input  style={{fontFamily:'lufga-light'}} className='subscribeInput' onChange={(e)=>setSubscribeEmail(e.target.value)} type="text" placeholder="Type your Email Address" id="emailAddressSubscribe" />
+                <button style={{fontFamily:'lufga-regular'}} className='subscribeButton' onClick={()=>console.log('hi')}>Subscribe</button>
             </div>
-            <p className='subscribtionSectionSubTitle' style={{fontFamily:'oswald',padding:'12px'}}>We gonna send you Email once a month</p>
+            <p className='subscribtionSectionSubTitle' style={{fontFamily:'lufga-light',padding:'12px'}}>We gonna send you Email once a month</p>
         </div>
      );
 }

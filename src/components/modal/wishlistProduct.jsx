@@ -26,12 +26,12 @@ const WishlistModal = ({ setActiveModal }) => {
       <ToastContainer />
       <Modal show onHide={() => setActiveModal(null)}>
         <Modal.Header closeButton>
-          <Modal.Title style={{ fontFamily: "oswald" }}>
+          <Modal.Title style={{ fontFamily: "lufga-regular" }}>
             Liked Products
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <div className="d-flex flex-wrap gap-3">
+          <div className="d-flex flex-wrap gap-3 justify-content-center">
             {wishlistNumber > 0 ? (
               wishList.map((product) => (
                 <div key={product.productId} className="liked-card">
@@ -58,14 +58,14 @@ const WishlistModal = ({ setActiveModal }) => {
             ) : (
               <p
                 className="text-center"
-                style={{ fontFamily: "lato", fontSize: "22px" }}
+                style={{ fontFamily: "lufga-light", fontSize: "22px" }}
               >
                 No item to show
               </p>
             )}
           </div>
         </Modal.Body>
-        <Modal.Footer style={{ fontFamily: "lato" }}>
+        <Modal.Footer style={{ fontFamily: "lufga-regular" }}>
           <Button variant="secondary" onClick={() => setActiveModal(null)}>
             Close
           </Button>
