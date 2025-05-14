@@ -40,7 +40,7 @@ const Footer = () => {
              </div>
        
         <div className="form d-flex flex-column px-5" style={{gap:'12px'}} >
-          <p style={{fontFamily:'oswald',fontSize:'22px',borderBottom:'3px solid #e80f88',padding:'8px',color:'#212529'}}>Get in Touch</p>
+          <p style={{fontFamily:'lufga-medium',fontSize:'22px',borderBottom:'3px solid #e80f88',padding:'8px',color:'#212529'}}>Get in Touch</p>
           <input
             type="text"
             id="name"
@@ -68,7 +68,7 @@ const Footer = () => {
             name="message"
             placeholder=" Enter your Message "
           />
-          <button type="submit" style={{background:"#fba1b7",borderRadius:'8px',fontFamily:'lato'}}>Submit</button>
+          <button type="submit" style={{background:"#fba1b7",borderRadius:'8px',fontFamily:'lufga-regular'}}>Submit</button>
         </div>
       </div>
     </div>
