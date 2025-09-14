@@ -1,0 +1,71 @@
+{
+  "common": {
+    "navigation": {
+      "home": "الرئيسية",
+      "about": "حول",
+      "products": "المنتجات",
+      "cart": "السلة",
+      "login": "تسجيل الدخول",
+      "register": "تسجيل",
+      "logout": "تسجيل الخروج",
+      "profile": "الملف الشخصي",
+      "orders": "الطلبات",
+      "wishlist": "قائمة الأمنيات"
+    },
+    "buttons": {
+      "add_to_cart": "أضف للسلة",
+      "buy_now": "اشتري الآن",
+      "view_details": "عرض التفاصيل",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "save": "حفظ",
+      "cancel": "إلغاء",
+      "submit": "إرسال",
+      "search": "بحث",
+      "filter": "تصفية",
+      "sort": "ترتيب",
+      "clear": "مسح",
+      "continue": "متابعة",
+      "back": "رجوع",
+      "next": "التالي",
+      "previous": "السابق",
+      "close": "إغلاق",
+      "confirm": "تأكيد",
+      "yes": "نعم",
+      "no": "لا"
+    },
+    "forms": {
+      "email": "البريد الإلكتروني",
+      "password": "كلمة المرور",
+      "confirm_password": "تأكيد كلمة المرور",
+      "first_name": "الاسم الأول",
+      "last_name": "اسم العائلة",
+      "phone": "الهاتف",
+      "address": "العنوان",
+      "city": "المدينة",
+      "country": "البلد",
+      "zip_code": "الرمز البريدي",
+      "required": "مطلوب",
+      "invalid_email": "تنسيق البريد الإلكتروني غير صحيح",
+      "password_mismatch": "كلمات المرور غير متطابقة",
+      "min_length": "الحد الأدنى للطول هو {{count}} أحرف"
+    },
+    "messages": {
+      "success": "نجح!",
+      "error": "خطأ!",
+      "warning": "تحذير!",
+      "info": "معلومات",
+      "loading": "جاري التحميل...",
+      "no_data": "لا توجد بيانات متاحة",
+      "not_found": "غير موجود",
+      "unauthorized": "وصول غير مصرح به",
+      "forbidden": "الوصول محظور",
+      "server_error": "حدث خطأ في الخادم"
+    },
+    "language": {
+      "select_language": "اختر اللغة",
+      "arabic": "العربية",
+      "english": "English"
+    }
+  }
+}
