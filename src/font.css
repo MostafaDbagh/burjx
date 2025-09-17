@@ -1,27 +1,27 @@
 @font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/static/Quicksand-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-}
+    font-family: 'lufga-regular';
+    src: url('../public/fonts/LufgaRegular.ttf') format('woff2');
+    font-weight: 400; 
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'lufga-medium';
+    src: url('../public/fonts/LufgaMedium.ttf') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Lufga-bold';
+    src: url('../public/fonts/LufgaBold.ttf') format('woff2');
+    font-weight: 700; 
+    font-style: normal;
+  }
 
-@font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/static/Quicksand-Medium.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/static/Quicksand-SemiBold.ttf') format('truetype');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  src: url('/fonts/static/Quicksand-Bold.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
-}
+  @font-face {
+    font-family: 'Lufga-light';
+    src: url('../public/fonts/LufgaLight.ttf') format('woff2');
+    font-weight: 700; 
+    font-style: normal;
+  }

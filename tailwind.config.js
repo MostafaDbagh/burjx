@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Quicksand", "sans-serif"],
+        sans: ["lufga", "sans-serif"],
       },
     },
   },
