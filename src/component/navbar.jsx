@@ -20,36 +20,37 @@ const Navbar = ({ links, dir = "ltr" }) => {
 
   return (
     <nav className="bg-[#EAECEE] shadow-sm px-4 md:px-8 py-4 flex items-center justify-between relative" dir={dir}>
-        <img src={logo} alt="Jowleh Logo" className="h-100 " />
+      <img src={logo} alt="Jowleh Logo" className="h-12 md:h-16" />
 
       <div className="hidden md:flex justify-center space-x-8 font-medium">
         {navLinks.map((link, index) => (
           <Link
             key={index}
             to={link.to}
-            className="!text-black hover:!text-[#235A5E] transition-colors font-quicksand !no-underline"
+            className="!text-black hover:!text-[#235A5E] transition-colors duration-300 font-quicksand !no-underline"
           >
             {link.label}
           </Link>
         ))}
       </div>
 
-      <div className="px-6"></div>
-
-     <div className="flex items-center space-x-4 relative">
+      <div className="flex items-center space-x-4 relative">
+        {/* زر الدخول */}
         <Link to="/login">
-          <button className="px-4 md:px-5 py-2 rounded-lg text-white font-medium transition bg-[#235A5E] hover:bg-[#1b474a]">
+          <button className="px-4 md:px-5 py-2 rounded-lg text-white font-medium transition-all duration-300 bg-[#235A5E] hover:bg-[#1b474a] hover:scale-105 hover:shadow-lg">
             {t("login")}
           </button>
         </Link>
 
+        {/* زر عربة التسوق */}
         <Link
           to="/cart"
-          className="flex items-center justify-center rounded-full text-white bg-[#235A5E] w-[45px] h-[45px] text-[20px] hover:bg-[#1b474a] transition-colors"
+          className="flex items-center justify-center rounded-full text-white bg-[#235A5E] w-[45px] h-[45px] text-[20px] transition-all duration-300 hover:bg-[#1b474a] hover:scale-110 hover:shadow-lg"
         >
           <FaShoppingCart />
         </Link>
 
+        {/* قائمة الهواتف */}
         <div className="md:hidden relative">
           <button
             className="text-2xl text-[#235A5E]"
@@ -64,7 +65,7 @@ const Navbar = ({ links, dir = "ltr" }) => {
                 <Link
                   key={index}
                   to={link.to}
-                  className="w-full px-4 py-2 text-black hover:text-[#235A5E] transition-colors font-quicksand"
+                  className="w-full px-4 py-2 text-black hover:text-[#235A5E] transition-colors duration-300 font-quicksand"
                   onClick={() => setIsOpen(false)} // يغلق القائمة عند اختيار رابط
                 >
                   {link.label}
