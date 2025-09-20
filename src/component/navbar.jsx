@@ -65,7 +65,7 @@ const Navbar = ({ links, dir = "ltr" }) => {
                 <Link
                   key={index}
                   to={link.to}
-                  className="w-full px-4 py-2 text-black hover:text-[#235A5E] transition-colors duration-300 font-quicksand"
+                  className="w-full px-4 py-2 text-black hover:text-[#235A5E] transition-colors duration-300 "
                   onClick={() => setIsOpen(false)} // يغلق القائمة عند اختيار رابط
                 >
                   {link.label}
