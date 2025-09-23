@@ -1,0 +1,24 @@
+{
+  "categories": {
+    "title": "Shop By Categories",
+    "offers": "Offers",
+    "fastFoods": "Fast Foods",
+    "groceries": "Groceries",
+    "water": "Water"
+  },
+  "products": {
+    "sectionTitle": "Top Selling Products",
+    "viewAll": "View All",
+    "orderNow": "Order Now",
+    "items": {
+      "apple": "Apple",
+      "tomato": "Tomato",
+      "nuts": "Nuts",
+      "spices": "Spices"
+    }
+  },
+  "navigation": {
+    "previous": "Previous",
+    "next": "Next"
+  }
+}
