@@ -1,0 +1,18 @@
+{
+    "downloadApp":{
+  "title": "Download Jawlah App",
+  "subtitle": "Get Faster Ordering, Exclusive Deals, and Track Your Deliveries In Real-Time",
+  "appstore": {
+    "small": "Download on the",
+    "title": "App Store",
+    "aria": "Download on the App Store"
+  },
+  "googleplay": {
+    "small": "GET IT ON",
+    "title": "Google Play",
+    "aria": "Get it on Google Play"
+  },
+  "imageAlt": "Jawlah mobile app"
+        
+    }
+}
