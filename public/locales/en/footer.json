@@ -1,0 +1,25 @@
+{
+  "description": "From food and groceries to water, gas, and donations, we bring everything into one cart — fast, reliable, and locally involved. Our mission is to empower communities and service providers through seamless technology and inclusive design.",
+  "quickLinks": {
+    "title": "Quick Links",
+    "about": "About Us",
+    "company": "Company",
+    "terms": "Terms & Conditions",
+    "privacy": "Privacy Policy"
+  },
+  "support": {
+    "title": "Support",
+    "help": "Help Center",
+    "track": "Track Order",
+    "careers": "Careers",
+    "contact": "Contact Us"
+  },
+  "followUs": {
+    "title": "Follow Us",
+    "facebook": "Facebook",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "youtube": "YouTube"
+  },
+  "rights": "All rights reserved."
+}
