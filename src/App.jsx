@@ -1,90 +1,35 @@
-import './App.css';
-import DownloadApp from './component/downloadApp';
-import { useAuth } from './hooks/useAuth';
+// components/TopOfferCard.jsx
+import offerImage from "../src/assests/images/heart";
 
-function App() {
-  // const { isAuthenticated, user, loading, login, logout } = useAuth();
-
-  // const handleLogin = () => {
-  //   login({ email: 'demo@example.com', password: 'password' });
-  // };
-
+export default function TopOfferCard() {
   return (
+    <div className="max-w-4xl mx-auto mt-10 bg-white shadow-lg rounded-lg overflow-hidden flex flex-col md:flex-row">
+      {/* صورة المنتجات */}
+      <div className="md:w-1/2 p-4 flex justify-center items-center">
+        <img
+          src={offerImage}
+          alt="Fresh Vegetables Offer"
+          className="object-contain"
+          width={300}
+          height={300}
+        />
+      </div>
 
-<DownloadApp/>
-    // <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-    //   <div className="text-center">
-    //     <h1 className="text-6xl font-lufga-bold text-primary mb-4">
-    //       JawlahA -APP  
-    //     </h1>
-    //     <p className="text-xl text-gray-600 mb-8">
-    //       Fresh Start - Ready to Build
-    //     </p>
-        
-    //     <div className="bg-white rounded-lg shadow-md p-8 max-w-md mb-6">
-    //       <h2 className="text-2xl font-lufga-medium text-gray-800 mb-4">
-    //         Setup Complete ✅
-    //       </h2>
-    //       <div className="space-y-2 text-left">
-    //         <div className="flex items-center gap-2">
-    //           <span className="text-green-500">✓</span>
-    //           <span>Tailwind CSS</span>
-    //         </div>
-    //         <div className="flex items-center gap-2">
-    //           <span className="text-green-500">✓</span>
-    //           <span>i18n (Arabic & English)</span>
-    //         </div>
-    //         <div className="flex items-center gap-2">
-    //           <span className="text-green-500">✓</span>
-    //           <span>RTL Support</span>
-    //         </div>
-    //         <div className="flex items-center gap-2">
-    //           <span className="text-green-500">✓</span>
-    //           <span>Redux Auth Store</span>
-    //         </div>
-    //         <div className="flex items-center gap-2">
-    //           <span className="text-green-500">✓</span>
-    //           <span>React Router</span>
-    //         </div>
-    //       </div>
-    //     </div>
-
-    //     {/* Auth Demo */}
-    //     <div className="bg-white rounded-lg shadow-md p-8 max-w-md">
-    //       <h2 className="text-2xl font-lufga-medium text-gray-800 mb-4">
-    //         Auth Demo 🔐
-    //       </h2>
-          
-    //       {isAuthenticated ? (
-    //         <div className="space-y-4">
-    //           <div className="text-center">
-    //             <p className="text-green-600 font-medium">Welcome, {user?.name}!</p>
-    //             <p className="text-sm text-gray-500">{user?.email}</p>
-    //           </div>
-    //           <button 
-    //             onClick={logout}
-    //             className="w-full btn-secondary"
-    //             disabled={loading}
-    //           >
-    //             Logout
-    //           </button>
-    //         </div>
-    //       ) : (
-    //         <div className="space-y-4">
-    //           <p className="text-gray-600">You are not logged in</p>
-    //           <button 
-    //             onClick={handleLogin}
-    //             className="w-full btn-primary"
-    //             disabled={loading}
-    //           >
-    //             {loading ? 'Logging in...' : 'Login Demo'}
-    //           </button>
-    //         </div>
-    //       )}
-    //     </div>
-    //   </div>
-    // </div>
+      {/* نص العرض */}
+      <div className="md:w-1/2 bg-teal-500 text-white p-6 flex flex-col justify-center">
+        <span className="uppercase text-sm font-semibold tracking-wide">
+          Sale
+        </span>
+        <h2 className="text-2xl font-bold mt-2 mb-4">
+          Enjoy up to <span className="text-orange-400">20% off</span>!
+        </h2>
+        <p className="mb-6">
+          Grab your limited-time discount and enjoy 20% off on all our products
+        </p>
+        <button className="bg-orange-400 text-white font-semibold py-2 px-4 rounded hover:bg-orange-500 transition-colors">
+          Shop Now
+        </button>
+      </div>
+    </div>
   );
 }
-
-export default App;
